@@ -1,0 +1,58 @@
+img {
+  height: 15px;
+  padding-right: 10px;
+  width: 15px;
+}
+
+.icon {
+  float: left;
+  margin-top: 1.4rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.container {
+  text-align: center;
+  width: 29rem;
+  height: 34.5rem;
+  border-radius: 20px;
+  margin: auto;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+}
+
+.error {
+  color: red;
+}
+
+/* Media Query */
+
+@media only screen and (max-width: 600px) {
+  img {
+    height: 10px;
+    padding-right: 5px;
+    width: 10px;
+  }
+
+  .icon {
+    float: none;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,96 @@
+.sidebar {
+  height: 100vh;
+  position: fixed;
+}
+
+.options {
+  list-style-type: none;
+  margin-top: 1rem;
+  height: 100vh;
+  border: 1ps solid white;
+}
+
+.option {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  border: 1ps solid white;
+}
+.btn {
+  cursor: pointer;
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  left: 10%;
+}
+.postTweet {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  margin-left: 10px;
+}
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+.tweetInput {
+  width: 80%;
+}
+
+.tweetInput input {
+  border-radius: 9999px;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.btn {
+  width: 100%;
+  margin-left: 90px;
+}
+.Btns {
+  display: flex;
+  width: 100%;
+}
+.btn1 {
+  display: flex;
+  width: 16%;
+  margin-top: 10px;
+  margin-left: 76px;
+  cursor: pointer;
+}
+.btn2 {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin-left: 290px;
+  text-align: center;
+}
+.lastBtn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.lastBtn:hover {
+  background-color: #f6f3f3;
+}
+
+/* Media Query */
+
+@media (max-width: 786px) {
+  .option {
+    font-size: 0;
+  }
+
+  .option svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

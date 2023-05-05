@@ -1,0 +1,45 @@
+.container {
+  text-align: center;
+  width: 29rem;
+  height: 34.2rem;
+  border-radius: 20px;
+  margin: auto;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+}
+
+.error {
+  color: red;
+}
+
+.icon {
+  float: left;
+  margin-top: 1.4rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.btn {
+  width: 12rem;
+  border-radius: 20px;
+  border: none;
+  height: 2rem;
+  font-size: 20px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .icon {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
