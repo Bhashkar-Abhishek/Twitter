@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 
 export function RightDownSection() {
-  
+
   const [userData, setuserData] = useState([
     {
       id: 1,
@@ -38,12 +38,12 @@ export function RightDownSection() {
       isFollow: false,
     },
     {
-        id: 5,
-        img:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4JsiPfdy5hXD3cUU0S_atKO639MJ3VViGeg&usqp=CAU",
-        name: "Narendra Modi",
-        username: "@NarendraM",
-        isFollow: false,
+      id: 5,
+      img:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4JsiPfdy5hXD3cUU0S_atKO639MJ3VViGeg&usqp=CAU",
+      name: "Narendra Modi",
+      username: "@NarendraM",
+      isFollow: false,
     }
   ]);
 
@@ -56,22 +56,24 @@ export function RightDownSection() {
           return user;
         }
       });
+      
     });
   };
 
+
   const [show, setShow] = useState(3)
-    const [buttontext, setButtonText] = useState('Show More')
+  const [buttontext, setButtonText] = useState('Show More')
 
-    const handleShow = () => {
-        if (show === userData.length) {
-            setShow(3)
-            setButtonText('Show More')
-        } else {
-            setShow(userData.length)
-            setButtonText('Show Less')
-        }
-
+  const handleShow = () => {
+    if (show === userData.length) {
+      setShow(3)
+      setButtonText('Show More')
+    } else {
+      setShow(userData.length)
+      setButtonText('Show Less')
     }
+
+  }
 
   return (
     <div className={style.main}>
@@ -110,19 +112,19 @@ export function RightDownSection() {
           </div>
         </div>
       ))}
-     
+
       <Button variant="contained"
-                sx={{
-                    textTransform: "none",
-                    borderRadius: "5rem",
-                    width: "9rem",
-                    fontSize: "1.3rem",
-                    backgroundColor: "#42a5f5",
-                    marginTop: "1rem",
-                    justifyContents: 'center'
-                }}
-                onClick={handleShow}
-            > {buttontext} </Button>
+        sx={{
+          textTransform: "none",
+          borderRadius: "5rem",
+          width: "9rem",
+          fontSize: "1.3rem",
+          backgroundColor: "#42a5f5",
+          marginTop: "1rem",
+          justifyContents: 'center'
+        }}
+        onClick={handleShow}
+      > {buttontext} </Button>
     </div>
   );
 }

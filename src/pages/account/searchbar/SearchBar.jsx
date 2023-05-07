@@ -1,13 +1,16 @@
 import SearchIcon from "@mui/icons-material/SearchSharp";
 import { TextField } from "@mui/material";
 
+
 export default function SearchBar() {
+
+  
   return (
     <>
       <TextField
         type="text"
-        // id="filled-basic"
         label="Search"
+        
         sx={{
           marginLeft: "2rem",
           width: "31rem",
@@ -23,6 +26,8 @@ export default function SearchBar() {
           endAdornment: <SearchIcon sx={{ color: "black" }} />,
         }}
       />
+      
+     
     </>
   );
 }

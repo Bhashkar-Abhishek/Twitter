@@ -32,14 +32,19 @@ function PostHead() {
       setbtnFor(false);
     }
   };
-  function handleChange(e) {
-    setImage(URL.createObjectURL(e.target.files[0]));
-    // console.log(image);
-  }
+ 
+
+  const handleChange = (event) => {
+    if (event.target.files[0]) {
+      setImage(URL.createObjectURL(event.target.files[0]));
+    }
+  };
+
   function handleInputChange(e) {
     setText(e.target.value);
     // console.log(image);
   }
+
   useEffect(() => {
     console.log(image);
   }, [image]);
@@ -74,6 +79,7 @@ function PostHead() {
     } else {
       alert("select something");
     }
+    setImage('')
   }
 
   return (
@@ -162,9 +168,11 @@ function PostHead() {
               id="fileInput"
               type="file"
               accept="image/*"
+             
               style={{ display: "none" }}
               onChange={handleChange}
             />
+            
             <GifIcon
               sx={{
                 height: "20px",
@@ -231,6 +239,7 @@ function PostHead() {
               }}
             />
           </div>
+          
           <div className={styles.btn2}>
             <Button
               sx={{
@@ -247,6 +256,9 @@ function PostHead() {
             </Button>
           </div>
         </div>
+        <div  >
+        {image ? <img src={image} alt="preview image" style={{width: '30rem', height: '35rem'}} /> : ''}
+          </div>
         <div className={styles.lastBtn}>
           <button
             style={{ color: "#1DA1F2", fontSize: "0.9rem", fontWeight: "500" }}

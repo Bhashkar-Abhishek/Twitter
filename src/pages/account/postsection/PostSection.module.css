@@ -71,12 +71,13 @@
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
+  /* color: black; */
 }
 
 .username {
   font-size: 13px;
   line-height: 15px;
-  color: gray;
+  /* color: black; */
 }
 
 .btn {
