@@ -1,6 +1,6 @@
 import style from "./RightDownSection.module.css";
 import { Button } from "@mui/material";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export function RightDownSection() {
 
@@ -49,17 +49,31 @@ export function RightDownSection() {
 
   const handleFollowToggle = (index) => {
     setuserData((prevUserData) => {
-      return prevUserData.map((user) => {
+      const newUserData = prevUserData.map((user) => {
         if (user.id === index) {
-          return { ...user, isFollow: !user.isFollow };
+          const updatedUser = { ...user, isFollow: !user.isFollow };
+          localStorage.setItem(`isFollow-${index}`, updatedUser.isFollow);
+          return updatedUser;
         } else {
           return user;
         }
       });
-      
+      return newUserData;
     });
   };
-
+  
+  useEffect(() => {
+    const newData = userData.map(user => {
+      const isFollow = localStorage.getItem(`isFollow-${user.id}`);
+      if (isFollow !== null) {
+        return { ...user, isFollow: isFollow === "true" };
+      } else {
+        return user;
+      }
+    });
+    setuserData(newData);
+  }, []);
+  
 
   const [show, setShow] = useState(3)
   const [buttontext, setButtonText] = useState('Show More')
