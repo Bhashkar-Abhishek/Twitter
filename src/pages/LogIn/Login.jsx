@@ -204,7 +204,7 @@ function Login() {
             borderRadius: "100px",
             backgroundColor: "white",
             color: "black",
-            width: "12rem",
+            width: "18rem",
             marginTop: "15px",
           }}
           variant="contained"
