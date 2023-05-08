@@ -17,6 +17,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/*" element={"Error 404 Page Not Found"} />
         </Routes>
       </BrowserRouter>
     </RecoilRoot>

@@ -53,8 +53,9 @@ const LeftSideBar = () => {
     setisLogin(false);
     navigate('/login')
     localStorage.removeItem("isLogedIn")
-    localStorage.removeItem("notInterested")
     localStorage.removeItem("isFollow")
+    localStorage.removeItem("notInterested")
+
   }
   return (
     <div className={styles.sidebar}>

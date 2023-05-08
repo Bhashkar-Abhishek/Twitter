@@ -227,7 +227,7 @@ export default function Register() {
             borderRadius: "100px",
             backgroundColor: "white",
             color: "black",
-            width: "12rem",
+            width: "15rem",
             marginTop: "15px",
           }}
           variant="contained"
