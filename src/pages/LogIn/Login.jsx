@@ -43,6 +43,7 @@ function Login() {
       if (user.password.toString() === password.toString()) {
         setlogin(true);
         localStorage.setItem("userData", JSON.stringify(user1));
+      localStorage.setItem("isLogedIn",true)
         navigate("/home");
       } else {
         alert("Invalid password");

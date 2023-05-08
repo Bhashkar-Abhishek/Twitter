@@ -1,5 +1,5 @@
 import React, { useState  } from "react";
-import styles from "./SideBar.module.css";
+import styles from "./Sidebar.module.css";
 import HomeIcon from "@mui/icons-material/Home";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";

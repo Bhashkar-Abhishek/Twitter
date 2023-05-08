@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/account/home/Home'
 import Register from "./pages/register/Register.jsx";
 import { RecoilRoot } from "recoil";
-import Login from "./pages/Login/Login.jsx";
+import Login from "./pages/LogIn/Login";
 import "./App.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -12,10 +12,27 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 
 function Home() {
   const [islogin, setlogin] = useRecoilState(isLogin);
-
+  const isLogedIn=localStorage.getItem("isLogedIn")
   return (
-    <Grid container spacing={2}>
-      {!islogin && (
+    <>
+    {isLogedIn?(
+      <Grid container spacing={2}>
+      <Grid item xs={3} md={2}>
+        <Sidebar />
+      </Grid>
+
+      <Grid item xs={5} md={6}>
+         <Middle />
+      </Grid>
+
+      <Grid item xs={4} md={4}>
+         <SearchBar />
+         <RightSection />
+         <RightDownSection />
+      </Grid>
+
+    </Grid>
+    ):(<Grid container spacing={2}>
         <TwitterIcon
           sx={{
             color: "skyblue",
@@ -25,25 +42,10 @@ function Home() {
             width: "100%",
           }}
         />
-      )}
-      {!islogin && <h1 className={styles.heading}>Welcome to home page</h1>}
-
-      <Grid item xs={3} md={2}>
-        {islogin && <Sidebar />}
-      </Grid>
-
-      <Grid item xs={5} md={6}>
-        {islogin && <Middle />}
-      </Grid>
-
-      <Grid item xs={4} md={4}>
-        {islogin && <SearchBar />}
-        {islogin && <RightSection />}
-        {islogin && <RightDownSection />}
-      </Grid>
-
-      {!islogin && <Footer />}
-    </Grid>
+      <h1 className={styles.heading}>Welcome to home page</h1>
+      <Footer />
+    </Grid>)}
+    </>
   );
 }
 
